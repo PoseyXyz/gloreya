@@ -2,6 +2,9 @@ import React from 'react';
 import { FaCartPlus } from 'react-icons/fa';
 import Slider from './Slider';
 import bbq from '../images/bbq.png'
+import bacon from '../images/bacon.png'
+import buffalo from '../images/bufallo.png'
+import hottie from '../images/hottie.png'
 import ComboCard from './ComboCard';
 function Specials(props) {
     return (
@@ -13,12 +16,11 @@ function Specials(props) {
                 </div>
                 <div className="overflow-hidden whitespace-nowrap">
                 <div className="grid grid-cols-4 overflow-hidden gap-2">
-                    <ComboCard/>
-                    <ComboCard/>
-                    <ComboCard/>
-                    <ComboCard/>
-                    <ComboCard/>
-                    <ComboCard/>
+                    <ComboCard name="Buffalo Ranch" img={hottie}/>
+                    <ComboCard name="BBQ Burger" img={bbq}/>
+                    <ComboCard name="Big Hottie" img={hottie}/>
+                    <ComboCard name="Ultimate Bacon" img={bacon}/>
+                   
                 </div>
                 </div>
                
