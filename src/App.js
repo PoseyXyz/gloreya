@@ -68,7 +68,7 @@ function App() {
             </div>
 
             <div className="flex justify-between gap-4 mb-4">
-              <Link className="bg-purple-600 rounded py-3 px-5 w-full font-semibold text-sm text-white" to='/cart'>
+              <Link className="bg-purple-600 rounded py-3 px-5 w-full font-semibold text-sm text-white text-center" to='/cart'>
               <button >VIEW CART</button>
               </Link>
               <button className="bg-purple-400 rounded py-3 px-5 w-full font-semibold text-sm text-white">CHECKOUT</button>
@@ -79,7 +79,7 @@ function App() {
       </div>
 
       {/* Cart 26 button*/}
-      <button style={{zIndex:45}} className="bg-blue-500 p-5 inline-block rounded-sm mt-4 shadow-md fixed box-border top-28 right-1/30" onClick={() => setShowSidebar(!showSidebar)}><i className="text-white"><FaCartPlus /></i><span className="text-white absolute -top-3 -right-2 bg-blue-500 p-1 font-thin text-xs rounded-full">{cart.length}</span></button>
+      <button style={{zIndex:45}} className="bg-blue-500 p-5 inline-block rounded-sm mt-4 shadow-md fixed box-border top-28 right-1/30" onClick={() => setShowSidebar(!showSidebar)}><i className="text-white"><FaCartPlus /></i><span className="text-white absolute -top-3 -right-2 bg-brand-red px-2 py-0.5 font-thin text-sm rounded-full">{cart.length}</span></button>
 
       <Switch>
         <Route exact path="/" component={Home} />
