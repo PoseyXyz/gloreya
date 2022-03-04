@@ -16,6 +16,7 @@ function Navbar(props) {
                         <ul className="hidden md:flex space-x-8 text-sm">
                             <Link to='/' style={{ color: '#E7272D' }} className="nav-li">HOME</Link>
                             <Link to='/menu' className="nav-li">MENU</Link>
+                            <Link to='/cart' className="nav-li">CART</Link>
                             {/* <li className="nav-li">SHOP</li> */}
                             <Link to='/contact' className="nav-li">CONTACT</Link>
                             <Link to='/products' className="nav-li hidden">ONLINE ORDER</Link>
