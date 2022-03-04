@@ -11,7 +11,7 @@ function Gallery(props) {
         <div className="">
             <div className="container flex flex-col gap-12 my-4">
             <div className="flex flex-col items-center justify-center">
-                    <p className="text-brand-red text-lg font-extrabold">GALLERY</p>
+                    <p className="text-brand-red text-lg font-extrabold mini-headline">GALLERY</p>
                     <h3 className="text-black font-black text-2xl md:text-5xl tracking-wide">Burger gallery</h3>
                 </div>
                 <div className="flex flex-col gap-4 sm:grid sm:grid-cols-4 sm:gap-4 md:gap-7">

@@ -9,7 +9,7 @@ function Testimonial(props) {
             <div className="container z-20 relative flex flex-col gap-12">
 
                 <div className="flex flex-col items-center justify-center">
-                    <p className="text-brand-red text-lg font-extrabold">INGREDIENTS</p>
+                    <p className="text-brand-red text-lg font-extrabold mini-headline">INGREDIENTS</p>
                     <h3 className="text-black font-black text-2xl md:text-5xl tracking-wide">Clients review</h3>
                 </div>
                 <div className="flex flex-col gap-6 lg:flex-row">

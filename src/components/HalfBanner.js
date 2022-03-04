@@ -14,7 +14,7 @@ function HalfBanner({headline}) {
                 </div>
             </div>
             <div className="flex items-center justify-center relative z-30" style={{height:'40vh'}}>
-                <h1 className="text-white tracking-wide text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black ">{headline}</h1>
+                <h1 className="text-white tracking-wide text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mini-headline">{headline}</h1>
             </div>
 
             <div className="donut absolute z-10 rounded-full border-brand-yellow bg-transparent">

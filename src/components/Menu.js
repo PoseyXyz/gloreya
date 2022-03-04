@@ -16,7 +16,7 @@ function Menu(props) {
         <div className="px-4 py-12">
             <div className="container flex flex-col items-center gap-16">
                 <div className="flex flex-col items-center justify-center">
-                    <p className="text-brand-red text-lg font-extrabold">menu</p>
+                    <p className="text-brand-red text-lg font-extrabold mini-headline">MENU</p>
                     <h3 className="text-center font-black text-2xl md:text-5xl tracking-wide">Choose your combo and order now</h3>
                 </div>
 
