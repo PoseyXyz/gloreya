@@ -20,8 +20,8 @@ function ProductsFile(props) {
     // }, [values.sOrder])
 
     const [showPopup, setShowPopup] = useState(false)
-    
-    
+
+
 
     const timeoutFunction = () => {
         setShowPopup(true)
@@ -34,9 +34,9 @@ function ProductsFile(props) {
     return (
         <div className="relative">
 
-           
-         
-                     {/*dissapearing button */}
+
+
+            {/*dissapearing button */}
             <div className="bg-yellow-500 inline-block px-6 py-3 text-xs font-extrabold fixed z-50 top-16 right-1/30" style={{ 'display': showPopup ? 'inline-block' : 'none' }}><p>PRODUCT HAS BEEN ADDED</p></div>
 
             <HalfBanner headline="Products" />
@@ -65,11 +65,11 @@ function ProductsFile(props) {
 
                             </div>
                         </div>
-                        <div className="grid grid-cols-2 xl:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
                             {filteredList.map(product => (
                                 <div>
 
-                                    <img src={product.image} className="rounded-lg rounded-b-none" alt="" />
+                                    <img src={product.image} className="rounded-lg w-screen rounded-b-none product-card" alt="" />
 
                                     <div className="flex flex-col shadow-md rounded-lg border-t-0 rounded-t-none py-3 border-gray-300 px-4">
                                         <p className="font-bold text-xl text-center">{product.title}</p>

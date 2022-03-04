@@ -9,6 +9,9 @@ import brisket from './images/pizzas/brisket.png'
 import funghi from './images/pizzas/funghi.png'
 import duck from './images/pizzas/duck.png'
 import gSausage from './images/pizzas/gSausage.png'
+import rice from './images/food/rice.png'
+import penne from './images/food/pennes.png'
+import ramen from './images/food/ramen.png'
 
 
 export const restaurantProducts = [{
@@ -36,25 +39,25 @@ export const restaurantProducts = [{
 },
 {
     id: 3,
-    title: 'Duck Prosciutto',
+    title: 'Rice',
     price: 300,
     inCart: false,
     count: 0,
     total: 0,
     color: 'red',
-    type: 'burger',
-    image: duck
+    type: 'food',
+    image: rice
 },
 {
     id: 4,
-    title: 'Grilled Sausage',
+    title: 'Ramen noodles',
     price: 300,
     inCart: false,
     count: 0,
     total: 0,
     color: '#50c9c3',
-    type: 'burger',
-    image: gSausage
+    type: 'food',
+    image: ramen
 },
 {
     id: 5,
@@ -102,26 +105,15 @@ export const restaurantProducts = [{
 },
 {
     id: 9,
-    title: 'Bison Burger',
+    title: 'Hot Pennes',
     price: 150,
     inCart: false,
     count: 0,
     total: 0,
     color: '#00e3ae',
-    type: 'burger',
-    image: product5
-},{
-    id: 10,
-    title: 'Bison Burger',
-    price: 150,
-    inCart: false,
-    count: 0,
-    total: 0,
-    color: '#00e3ae',
-    type: 'burger',
-    image: product5
-},
-
+    type: 'food',
+    image: penne
+}
 
 ]
     //jollof, pasta white yam
