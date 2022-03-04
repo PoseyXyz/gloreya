@@ -3,6 +3,7 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      transform:['group-hover'],
       colors:{
         "brand-yellow":"#FBBE36",
         "brand-red":"#E7272D",

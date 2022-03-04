@@ -30,7 +30,7 @@ function Navbar(props) {
                         </div>
                         <div className="flex items-center space-x-10">
                             <Link to='/products'>
-                                <button className="btn hidden md:block text-xs font-bold">ONLINE ORDER</button>
+                                <button className="btn animate-bounce hidden md:block text-xs font-bold">ONLINE ORDER</button>
                             </Link>
 
                             <Link to='/cart' className="flex gap-1 justify-center">
