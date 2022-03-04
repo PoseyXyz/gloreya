@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import bannerImg from '../images/burger1.png'
 import { FaPlus } from 'react-icons/fa';
-
+import blob from '../images/blob.svg'
 function Banner(props) {
     return (
         <div className="bg-brand-yellow relative overflow-hidden flex px-4 sm:px-8 xl:px-0">
@@ -39,8 +39,9 @@ function Banner(props) {
                         </div>
                     </div>
                 </div>
-                <div className="">
-                <img src={bannerImg} alt="" className=""/>
+                <div className="relative flex">
+                    <img className="absolute z-10 w-10/12" src={blob}/>
+                <img className="relative z-20" src={bannerImg} alt=""/>
                 </div>
                    
                 

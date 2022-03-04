@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import burgerIcon from '../images/burgerIcon.png'
 import pizzaIcon from '../images/pizzaIcon.png'
 import chickenIcon from '../images/chickenIcon.png'
@@ -11,7 +11,120 @@ import allDay from  '../images/allDayCard.png'
 import twenty from '../images/20Card.png'
 
 
+
 function Menu(props) {
+    const [tempState, setTempState] = useState("burgers")
+    const [menuData, setMenuData] = useState(
+        [
+            {   
+                id:1,
+                name:"Smoked Brisket Sandwich",
+                desc:"Pulled Pork, Beer Braised Brisket, & Quarter Rack of Ribs served with your choice of side",
+                price:39,
+                recommended:true,
+                type:"burgers"
+            },
+            {   
+                id:2,
+                name:"Pulled Chicken Sandwich",
+                desc:"Pulled Pork, Beer Braised Brisket, & Quarter Rack of Ribs served with your choice of side",
+                price:12,
+                recommended:true,
+                type:"burgers"
+            },
+            {   
+                id:3,
+                name:"Ocean Spray Cranberry Juice",
+                desc:"Pulled Pork, Beer Braised Brisket, & Quarter Rack of Ribs served with your choice of side",
+                price:39,
+                recommended:false,
+                type:"beverages"
+            },
+            {   
+                id:4,
+                name:"Canada Dry Ginger Ale",
+                desc:"Pulled Pork, Beer Braised Brisket, & Quarter Rack of Ribs served with your choice of side",
+                price:39,
+                recommended:false,
+                type:"beverages"
+            },
+            {   
+                id:5,
+                name:"6 Piece Mozzarella Sticks",
+                desc:"Pulled Pork, Beer Braised Brisket, & Quarter Rack of Ribs served with your choice of side",
+                price:10,
+                recommended:true,
+                type:"chickens"
+            },
+            {   
+                id:6,
+                name:"Martinelli's Apple Juice",
+                desc:"Pulled Pork, Beer Braised Brisket, & Quarter Rack of Ribs served with your choice of side",
+                price:11,
+                recommended:false,
+                type:"beverages"
+            },
+            {   
+                id:7,
+                name:"Fatboy Combo",
+                desc:"Pulled Pork, Beer Braised Brisket, & Quarter Rack of Ribs served with your choice of side",
+                price:40,
+                recommended:false,
+                type:"burgers"
+            },
+            {   
+                id:8,
+                name:"Japanese Oishii Burger",
+                desc:"Pulled Pork, Beer Braised Brisket, & Quarter Rack of Ribs served with your choice of side",
+                price:11,
+                recommended:false,
+                type:"burgers"
+            },
+            {   
+                id:9,
+                name:"Double Decker",
+                desc:"Pulled Pork, Beer Braised Brisket, & Quarter Rack of Ribs served with your choice of side",
+                price:11,
+                recommended:false,
+                type:"burgers"
+            },
+            {   
+                id:10,
+                name:"Flame Mushroom Burger",
+                desc:"Pulled Pork, Beer Braised Brisket, & Quarter Rack of Ribs served with your choice of side",
+                price:11,
+                recommended:false,
+                type:"burgers"
+            },
+            {   
+                id:11,
+                name:"Cappuccino",
+                desc:"Pulled Pork, Beer Braised Brisket, & Quarter Rack of Ribs served with your choice of side",
+                price:2,
+                recommended:false,
+                type:"coffees"
+            },
+            {   
+                id:12,
+                name:"Pepperoni Pizza",
+                desc:"Pulled Pork, Beer Braised Brisket, & Quarter Rack of Ribs served with your choice of side",
+                price:11,
+                recommended:false,
+                type:"pizzas"
+            },
+            {   
+                id:13,
+                name:"Flamin hot",
+                desc:"Pulled Pork, Beer Braised Brisket, & Quarter Rack of Ribs served with your choice of side",
+                price:11,
+                recommended:false,
+                type:"pizzas"
+            }
+        ]
+    )
+    const switchMenu=(type)=>{
+        setTempState(type)
+    }
     return (
         <div className="px-4 py-12">
             <div className="container flex flex-col items-center gap-16">
@@ -22,26 +135,26 @@ function Menu(props) {
 
                 {/*Images */}
                 <div className="flex flex-wrap gap-8 md:gap-12 justify-center">
-                    <div className="flex flex-col gap-2 items-center justify-between flex-1">
+                    <button className={`${tempState==="burgers"? "border-b-2 border-brand-red": ""} flex flex-col gap-2 items-center justify-between flex-1`} onClick={()=>switchMenu('burgers')}>
                         <img src={burgerIcon} />
                         <p>BURGERS</p>
-                    </div>
-                    <div className="flex flex-col gap-2 items-center justify-between flex-1">
+                    </button>
+                    <button className={`${tempState==="pizzas"? "border-b-2 border-brand-red": ""} flex flex-col gap-2 items-center justify-between flex-1`} onClick={()=>switchMenu('pizzas')}>
                         <img src={pizzaIcon} />
                         <p>PIZZAS</p>
-                    </div>
-                    <div className="flex flex-col gap-2 items-center justify-between flex-1">
+                    </button>
+                    <button className={`${tempState==="chickens"? "border-b-2 border-brand-red": ""} flex flex-col gap-2 items-center justify-between flex-1`}  onClick={()=>switchMenu('chickens')}>
                         <img src={chickenIcon} />
                         <p>CHICKEN</p>
-                    </div>
-                    <div className="flex flex-col gap-2 items-center justify-between flex-1">
+                    </button>
+                    <button className={`${tempState==="beverages"? "border-b-2 border-brand-red": ""} flex flex-col gap-2 items-center justify-between flex-1`}  onClick={()=>switchMenu('beverages')}>
                         <img src={beveragesIcon} />
                         <p>BEVERAGES</p>
-                    </div>
-                    <div className="flex flex-col gap-2 items-center justify-between flex-1">
+                    </button>
+                    <button className={`${tempState==="coffees"? "border-b-2 border-brand-red": ""} flex flex-col gap-2 items-center justify-between flex-1`}  onClick={()=>switchMenu('coffees')}>
                         <img src={coffeeIcon} />
                         <p>COFFEE</p>
-                    </div>
+                    </button>
                 </div>
                 {/* <div className="flex flex-col gap-4">
                     <div className="flex gap-20">
@@ -76,7 +189,31 @@ function Menu(props) {
 
                 {/*Items */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="flex flex-col gap-1">
+                    {
+                        menuData.filter(item=>item.type===tempState).map(item=>{
+                            const {name, desc, price, recommended} = item
+                            return(
+                                <div className="flex flex-col gap-1">
+                                <div className={`${recommended?'block':'hidden'} bg-brand-red py-1 px-3 self-start rounded-2xl`}>
+                                    <p className="text-white text-xs">RECOMMENDED</p>
+                                </div>
+                                <div className="flex gap-2">
+                                    <div className="flex flex-col">
+                                        <div className="flex gap-2">
+                                            <h3 className="text-lg lg:text-lg font-bold mb-4">{name}</h3>
+                                            <div style={{ height: '1px' }} className="w-2/4 border-gray-400 mt-4 border-dashed border"></div>
+                                        </div>
+                                        <p className="text-gray-500">{desc}</p>
+                                    </div>
+                                    <div>
+                                        <p className="text-brand-red text-xl font-extrabold">${price}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            )
+                        })
+                    }
+                    {/* <div className="flex flex-col gap-1">
                         <div className="bg-brand-red py-1 px-3 self-start rounded-2xl">
                             <p className="text-white text-xs">RECOMMENDED</p>
                         </div>
@@ -211,7 +348,7 @@ function Menu(props) {
                                 <p className="text-brand-red text-xl font-extrabold">$39</p>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
 

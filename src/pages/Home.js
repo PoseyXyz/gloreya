@@ -19,15 +19,15 @@ function Home(props) {
 
             <Banner />
             <Welcome />
-
+            <Specials />
             <BurgerComponenets />
             <Menu />
             <Delivery />
             <Testimonial />
             <Gallery />
-            <News />
+            {/* <News /> */}
             <Footer />
-            <Specials />
+            
 
 
         </div>
