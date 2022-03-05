@@ -131,7 +131,7 @@ function RestaurantMenu(props) {
                         {menuData.filter(menuItem => menuItem.type === 'burgers').map(menuItem => (
                             <div className="flex gap-4">
                                 <div className="w-4/12">
-                                    <img src={productImage} className="rounded-lg" />
+                                    <img src="http://placehold.jp/150x150.png" className="rounded-lg" />
                                 </div>
                                 <div className="flex flex-col gap-1">
                                     <div className="bg-brand-red py-1 px-3 self-start rounded-2xl mb-2" style={{ display: menuItem.recommended ? 'block' : 'none' }}>
@@ -174,7 +174,7 @@ function RestaurantMenu(props) {
                         {menuData.filter(menuItem => menuItem.type === 'pizzas').map(menuItem => (
                             <div className="flex gap-4">
                                 <div className="w-4/12">
-                                    <img src={productImage} className="rounded-lg" />
+                                    <img src="http://placehold.jp/150x150.png" className="rounded-lg" />
                                 </div>
                                 <div className="flex flex-col gap-1">
                                     <div className="bg-brand-red py-1 px-3 self-start rounded-2xl mb-2" style={{ display: menuItem.recommended ? 'block' : 'none' }}>
@@ -219,7 +219,7 @@ function RestaurantMenu(props) {
                         {menuData.filter(menuItem => menuItem.type === 'beverages').map(menuItem => (
                             <div className="flex gap-4">
                                 <div className="w-4/12">
-                                    <img src={productImage} className="rounded-lg" />
+                                    <img src="http://placehold.jp/150x150.png" className="rounded-lg" />
                                 </div>
                                 <div className="flex flex-col gap-1">
                                     <div className="bg-brand-red py-1 px-3 self-start rounded-2xl mb-2" style={{ display: menuItem.recommended ? 'block' : 'none' }}>
