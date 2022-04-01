@@ -7,7 +7,7 @@ function BurgerComponenets(props) {
             <div className="container flex flex-col gap-12">
             <div className="flex flex-col items-center justify-center">
             <p className="text-brand-red text-lg font-extrabold mini-headline">INGREDIENTS</p>
-                    <h3 className="text-white font-black text-2xl md:text-5xl tracking-wide">Baked with natural ingredients</h3>
+                    <h3 className="text-white font-black text-2xl text-center md:text-5xl tracking-wide">Baked with natural ingredients</h3>
             </div>
             <div className="text-white grid grid-cols-3 gap-8 my-12">
                 <div className="flex flex-col gap-20">

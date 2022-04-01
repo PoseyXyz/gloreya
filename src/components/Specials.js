@@ -15,7 +15,7 @@ function Specials(props) {
                     <h3 className="text-black font-black text-2xl md:text-5xl tracking-wide">Our delicious burgers</h3>
                 </div>
                 <div className="overflow-hidden whitespace-nowrap">
-                <div className="grid grid-cols-4 overflow-hidden gap-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-4 overflow-hidden gap-2">
                     <ComboCard name="Buffalo Ranch" img={hottie}/>
                     <ComboCard name="BBQ Burger" img={bbq}/>
                     <ComboCard name="Big Hottie" img={hottie}/>
