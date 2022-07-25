@@ -18,7 +18,7 @@ function Testimonial(props) {
                     </div>
                     <div className="mt-4 flex flex-col gap-4 px-4">
                         <i className="text-6xl text-gray-200"><FaQuoteLeft/></i>
-                        <p className="text-gray-800 font-bold text-2xl">Glorey's menu is always packed and the taste of every single meal they make is out of this world</p>
+                        <p className="text-gray-800 font-bold text-2xl">Gloreya's menu is always packed and the taste of every single meal they make is out of this world</p>
                         <div className="flex flex-col">
                             <span className="flex gap-2 items-center">
                             <h4 className="text-2xl font-black">Nina Margaret</h4>
