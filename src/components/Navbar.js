@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { FaCartPlus, FaBars } from 'react-icons/fa'
+import { FaCartPlus } from 'react-icons/fa'
 import { Link } from 'react-router-dom';
 import { HavenContext } from '../Context';
 import Logo from '../images/logo.png'
-import {GiHamburgerMenu, GiCancel} from 'react-icons/gi'
+import {GiHamburgerMenu} from 'react-icons/gi'
 
 function Navbar() {
     const { cart, miniNavbarOpen, setMiniNavbarOpen } = useContext(HavenContext)
@@ -36,7 +36,7 @@ function Navbar() {
 
                             <Link to='/cart' className="flex gap-1 justify-center">
                                 <i className="text-white text-xl"><FaCartPlus /></i>
-                                <span className="bg-brand-red px-2 flex items-center justify-center rounded-full"><span className="text-white text-xs font-bold">{cart.length}</span></span>
+                                <span className="bg-brand-red font-barlow px-2 flex items-center justify-center rounded-full"><span className="text-white text-xs font-bold">{cart.length}</span></span>
                             </Link>
                         </div>
 

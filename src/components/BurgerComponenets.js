@@ -12,15 +12,15 @@ function BurgerComponenets(props) {
             <div className="text-white grid grid-cols-3 gap-8 my-12">
                 <div className="flex flex-col gap-20">
                 <div>
-                    <h5 className="text-2xl font-bold mb-4 mini-headline">Fresh<span className="text-brand-red"> Bread</span></h5>
+                    <h5 className="text-2xl font-bold mb-4">Fresh<span className="text-brand-red"> Bread</span></h5>
                     <p>As well known and we are very busy all days. Advice you to call us before arriving so we.</p>
                 </div>
                 <div>
-                    <h5 className="text-2xl font-bold mb-4 mini-headline">Lettuce<span className="text-brand-red"> Leaf</span></h5>
+                    <h5 className="text-2xl font-bold mb-4">Lettuce<span className="text-brand-red"> Leaf</span></h5>
                     <p>As well known and we are very busy all days. Advice you to call us before arriving so we.</p>
                 </div>
                 <div>
-                    <h5 className="text-2xl font-bold mb-4 mini-headline">Glow<span className="text-brand-red"> Cheese</span></h5>
+                    <h5 className="text-2xl font-bold mb-4">Glow<span className="text-brand-red"> Cheese</span></h5>
                     <p>As well known and we are very busy all days. Advice you to call us before arriving so we.</p>
                 </div>
                 </div>
@@ -32,15 +32,15 @@ function BurgerComponenets(props) {
 
                 <div className="flex flex-col gap-20">
                 <div>
-                    <h5 className="text-2xl font-bold mb-4 mini-headline">Mild<span className="text-brand-red"> Butter</span></h5>
+                    <h5 className="text-2xl font-bold mb-4">Mild<span className="text-brand-red"> Butter</span></h5>
                     <p>As well known and we are very busy all days. Advice you to call us before arriving so we.</p>
                 </div>
                 <div>
-                    <h5 className="text-2xl font-bold mb-4 mini-headline">Sleek<span className="text-brand-red"> Onion</span></h5>
+                    <h5 className="text-2xl font-bold mb-4">Sleek<span className="text-brand-red"> Onion</span></h5>
                     <p>As well known and we are very busy all days. Advice you to call us before arriving so we.</p>
                 </div>
                 <div>
-                    <h5 className="text-2xl font-bold mb-4 mini-headline">Sliced<span className="text-brand-red"> Beef</span></h5>
+                    <h5 className="text-2xl font-bold mb-4">Sliced<span className="text-brand-red"> Beef</span></h5>
                     <p>As well known and we are very busy all days. Advice you to call us before arriving so we.</p>
                 </div>
                 </div>

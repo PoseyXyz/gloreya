@@ -79,7 +79,7 @@ function App() {
       </div>
 
       {/* Cart 26 button*/}
-      <button style={{zIndex:45}} className="p-5 bg-cart-btn-purple inline-block rounded-sm mt-4 shadow-md fixed box-border bottom-4 right-12/100" onClick={() => setShowSidebar(!showSidebar)}><i className="text-white"><FaCartPlus /></i><span className="text-white absolute -top-3 -right-2 bg-brand-red px-2 py-0.5 font-thin text-sm rounded-full">{cart.length}</span></button>
+      <button style={{zIndex:45}} className="p-5 bg-cart-btn-purple inline-block rounded-sm mt-4 shadow-md fixed box-border bottom-4 right-12/100" onClick={() => setShowSidebar(!showSidebar)}><i className="text-white"><FaCartPlus /></i><span className="text-white absolute font-barlow -top-3 -right-2 bg-brand-red px-2 py-0.5 font-thin text-sm rounded-full">{cart.length}</span></button>
 
       <Switch>
         <Route exact path="/" component={Home} />

@@ -2,51 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-.nav-li{
-  @apply text-white cursor-pointer hover:text-brand-red;
-}
-
-.btn{
-  @apply rounded-3xl bg-brand-red text-white py-3 px-8;
-}
-
-.productBtn{
-  @apply text-white rounded-lg py-3 px-4 self-center w-full mt-3 flex items-center gap-2 justify-center duration-300;
-}
-
-.sideBarOpen{
-  @apply h-screen bg-white fixed z-50 right-0 gap-6 flex flex-col overflow-hidden w-full xl:w-1/4 px-4
-}
-
-.sideBarClosed{
-  @apply h-screen bg-white fixed z-50 right-0 gap-6 flex flex-col overflow-hidden w-0
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.mini-headline{
-  font-family: "Barlow",cursive;
-}
-html,body{
-  font-family: "Roboto" sans-serif;
-}
-a{
-  font-family: "Barlow";
-  font-weight: 700
-}
-.social-icon{
-  @apply rounded-full mx-1 p-3 text-white;
+a {
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+p,
+button,
+.font-roboto {
+  font-family: "Roboto", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+.font-barlow {
+  font-family: "Barlow", sans-serif;
+}
+
+.mini-headline,
+.font-p_marker {
+  font-family: "Permanent Marker", cursive;
+  @apply text-2xl text-brand-red;
+}
+
+.nav-li {
+  @apply text-white cursor-pointer hover:text-brand-red;
+}
+
+.btn {
+  @apply rounded-3xl bg-brand-red text-white py-3 px-8;
+}
+
+.productBtn {
+  @apply text-white rounded-lg py-3 px-4 self-center w-full mt-3 flex items-center gap-2 justify-center duration-300;
+}
+
+.sideBarOpen {
+  @apply h-screen bg-white fixed z-50 right-0 gap-6 flex flex-col overflow-hidden w-full xl:w-1/4 px-4;
+}
+
+.sideBarClosed {
+  @apply h-screen bg-white fixed z-50 right-0 gap-6 flex flex-col overflow-hidden w-0;
+}
+
+.menu-switch-btn {
+  @apply duration-300 font-bold hover:text-brand-red flex flex-col gap-2 items-center justify-between flex-1 border-b-2;
+}
+
+.social-icon {
+  @apply rounded-full mx-1 p-3 text-white;
 }

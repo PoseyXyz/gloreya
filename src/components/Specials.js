@@ -1,11 +1,9 @@
 import React from 'react';
-import { FaCartPlus } from 'react-icons/fa';
-import Slider from './Slider';
 import bbq from '../images/bbq.png'
 import bacon from '../images/bacon.png'
-import buffalo from '../images/bufallo.png'
 import hottie from '../images/hottie.png'
 import ComboCard from './ComboCard';
+
 function Specials(props) {
     return (
         <div>

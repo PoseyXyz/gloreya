@@ -29,7 +29,7 @@ function Banner(props) {
                         <div className="relative grid grid-cols-2 w-full gap-4 items-center">
                             <div className="flex flex-1 justify-center flex-col w-2/4 gap-2">
                                 <div style={{ color: '#EB452F' }} className="flex gap-4 items-center">
-                                    <p className="text-sm font-bold sm:font-extrabold sm:text-xl md:text-2xl">NEW IN MENU</p>
+                                    <span className="text-sm font-bold sm:font-extrabold sm:text-xl md:text-2xl font-barlow">NEW IN MENU</span>
                                     <span style={{ background: '#EB452F' }} className="h-1 hidden lg:block w-1/4 mt-2"></span>
                                 </div>
                                 <h1 className="text-white tracking-wide text-2xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl font-black">DOUBLE <br></br> MUSHROOM <br></br> BURGER</h1>

@@ -135,23 +135,23 @@ function Menu(props) {
 
                 {/*Images */}
                 <div className="flex flex-wrap gap-8 md:gap-12 justify-center">
-                    <button className={`${tempState==="burgers"? "border-b-2 border-brand-red": ""} flex flex-col gap-2 items-center justify-between flex-1`} onClick={()=>switchMenu('burgers')}>
+                    <button className={`${tempState==="burgers"? "border-brand-red": "border-transparent"} menu-switch-btn`} onClick={()=>switchMenu('burgers')}>
                         <img src={burgerIcon} />
                         <p>BURGERS</p>
                     </button>
-                    <button className={`${tempState==="pizzas"? "border-b-2 border-brand-red": ""} flex flex-col gap-2 items-center justify-between flex-1`} onClick={()=>switchMenu('pizzas')}>
+                    <button className={`${tempState==="pizzas"? "border-brand-red": "border-transparent"} menu-switch-btn`} onClick={()=>switchMenu('pizzas')}>
                         <img src={pizzaIcon} />
                         <p>PIZZAS</p>
                     </button>
-                    <button className={`${tempState==="chickens"? "border-b-2 border-brand-red": ""} flex flex-col gap-2 items-center justify-between flex-1`}  onClick={()=>switchMenu('chickens')}>
+                    <button className={`${tempState==="chickens"? "border-brand-red": "border-transparent"} menu-switch-btn`}  onClick={()=>switchMenu('chickens')}>
                         <img src={chickenIcon} />
                         <p>CHICKEN</p>
                     </button>
-                    <button className={`${tempState==="beverages"? "border-b-2 border-brand-red": ""} flex flex-col gap-2 items-center justify-between flex-1`}  onClick={()=>switchMenu('beverages')}>
+                    <button className={`${tempState==="beverages"? "border-brand-red": "border-transparent"} menu-switch-btn`}  onClick={()=>switchMenu('beverages')}>
                         <img src={beveragesIcon} />
                         <p>BEVERAGES</p>
                     </button>
-                    <button className={`${tempState==="coffees"? "border-b-2 border-brand-red": ""} flex flex-col gap-2 items-center justify-between flex-1`}  onClick={()=>switchMenu('coffees')}>
+                    <button className={`${tempState==="coffees"? "border-brand-red": "border-transparent"} menu-switch-btn`}  onClick={()=>switchMenu('coffees')}>
                         <img src={coffeeIcon} />
                         <p>COFFEE</p>
                     </button>
