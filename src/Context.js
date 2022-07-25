@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import useForm from './hooks/useForm'
-import { restaurantProducts } from './data'
+import { restaurantProducts } from './data/storeProducts'
 
 const HavenContext = React.createContext()
 

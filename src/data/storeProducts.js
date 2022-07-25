@@ -1,18 +1,12 @@
-import product1 from './images/products/product1.jpg'
-import product2 from './images/products/product2.jpg'
-import product3 from './images/products/product3.jpg'
-import product4 from './images/products/product4.jpg'
-import product5 from './images/products/product5.jpg'
-import product6 from './images/products/product6.jpg'
-import quarter from './images/pizzas/quarter.png'
-import brisket from './images/pizzas/brisket.png'
-import funghi from './images/pizzas/funghi.png'
-import duck from './images/pizzas/duck.png'
-import gSausage from './images/pizzas/gSausage.png'
-import rice from './images/food/rice.png'
-import penne from './images/food/pennes.png'
-import ramen from './images/food/ramen.png'
-
+import product1 from '../images/products/product1.jpg'
+import product4 from '../images/products/product4.jpg'
+import product5 from '../images/products/product5.jpg'
+import quarter from '../images/pizzas/quarter.png'
+import brisket from '../images/pizzas/brisket.png'
+import funghi from '../images/pizzas/funghi.png'
+import rice from '../images/food/rice.png'
+import penne from '../images/food/pennes.png'
+import ramen from '../images/food/ramen.png'
 
 export const restaurantProducts = [{
     id: 1,

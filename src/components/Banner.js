@@ -50,7 +50,7 @@ function Banner() {
                                 </div>
                             </div>
                             <div className="relative flex">
-                                <img className="absolute z-10 w-10/12" alt='banner_blob' src={blob} />
+                                <img className="absolute z-10 w-full" alt='banner_blob' src={blob} />
                                 <img className="relative z-20" alt="burger_image" src={bannerImg} />
                             </div>
 
