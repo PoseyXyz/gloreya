@@ -10,7 +10,7 @@ function Testimonial(props) {
 
                 <div className="flex flex-col items-center justify-center">
                     <p className="text-brand-red text-lg font-extrabold mini-headline">INGREDIENTS</p>
-                    <h3 className="text-black font-black text-2xl md:text-5xl tracking-wide">Clients review</h3>
+                    <h3 className="text-black font-black text-2xl md:text-5xl tracking-wide">Customer reviews</h3>
                 </div>
                 <div className="flex flex-col gap-6 lg:flex-row">
                     <div>
@@ -18,7 +18,7 @@ function Testimonial(props) {
                     </div>
                     <div className="mt-4 flex flex-col gap-4 px-4">
                         <i className="text-6xl text-gray-200"><FaQuoteLeft/></i>
-                        <p className="text-gray-800 font-bold text-2xl">A small river named Duden flows by their place and splies it with the necessary regalia. It is a paradisemic country, in which</p>
+                        <p className="text-gray-800 font-bold text-2xl">Glorey's menu is always packed and the taste of every single meal they make is out of this world</p>
                         <div className="flex flex-col">
                             <span className="flex gap-2 items-center">
                             <h4 className="text-2xl font-black">Nina Margaret</h4>

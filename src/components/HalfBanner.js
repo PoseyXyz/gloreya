@@ -16,7 +16,7 @@ function HalfBanner({ headline }) {
                     <Navbar />
                 </div>
             </div> */}
-            <div className='flex overflow-visible items-center container gap-4 z-20'>
+            <div className='flex overflow-visible items-center container gap-4'>
                 <div className='container'>
                     <Navbar />
                 </div>
@@ -24,7 +24,7 @@ function HalfBanner({ headline }) {
 
             </div>
             <div className="flex items-center justify-center relative z-30" style={{ height: '40vh' }}>
-                <h1 className="text-white tracking-wide text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mini-headline">{headline}</h1>
+                <h1 className="text-white tracking-wide text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black font-barlow">{headline}</h1>
             </div>
 
             <div className="donut absolute z-10 rounded-full border-brand-yellow bg-transparent">

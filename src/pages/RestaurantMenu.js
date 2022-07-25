@@ -124,7 +124,7 @@ function RestaurantMenu(props) {
             <div className="container py-8 px-8">
                 <div className="mt-24">
                     <div className="flex flex-col items-center justify-center">
-                        <p className="text-brand-red text-lg font-extrabold">menu</p>
+                        <p className="text-brand-red text-lg font-extrabold mini-headline">MENU</p>
                         <h3 className="text-center font-black text-2xl md:text-5xl tracking-wide">Burger</h3>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">

@@ -1,7 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { FaTimes } from 'react-icons/fa';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import Footer from '../components/Footer';
 import HalfBanner from '../components/HalfBanner';
 import { HavenContext } from '../Context';
+import { FaCartPlus } from 'react-icons/fa'
 
 function Cart(props) {
     const { products, addToCart, total, removeFromCart, cart, incrementSingleCartItemCount, decrementSingleCartItemCount, controlQuantity } = useContext(HavenContext)
@@ -9,7 +11,7 @@ function Cart(props) {
         border: '1px solid red',
         margin: '1rem'
     }
-    const [number, setNumber] = useState(0)
+
 
     return (
         <>
@@ -30,7 +32,16 @@ function Cart(props) {
             <div className="container my-8 flex flex-col">
                 {cart.length === 0
                     ?
-                    <div className="self-center"><h3 className="text-center font-black text-2xl md:text-5xl tracking-wide">Cart currently empty</h3></div>
+                    <div className='py-12 px-8 border border-gray-50 shadow-lg flex flex-col gap-8 rounded-md mx-4'>
+                        <div className='p-4 flex gap-4 border-t-2 rounded-r-md border-blue-700 text-gray-500 bg-gray-50 items-center'>
+                            <i className='text-blue-700'><FaCartPlus /></i>
+                            <p>Your cart is currently empty</p>
+                        </div>
+                        <Link to='/products'>
+                            <button className="btn text-sm font-bold hover:bg-gray-200 duration-500 hover:text-black">VIEW PRODUCTS</button>
+                        </Link>
+                    </div>
+                    // <div className="self-center"><h3 className="text-center font-black text-2xl md:text-5xl tracking-wide">Your cart is currently empty</h3></div>
                     :
                     <>
                         <div className="">
@@ -41,7 +52,7 @@ function Cart(props) {
                                         return (
                                             <div className="my-4">
                                                 <div className="border-2 border-b-0 py-2 px-4 flex font-bold text-white justify-center">
-                                                <span className="text-brand-red font-bold text-lg">{title}</span>
+                                                    <span className="text-brand-red font-bold text-lg">{title}</span>
                                                 </div>
 
                                                 <div className="border-2 border-b-0 py-2 px-4 flex justify-between items-center">
@@ -49,7 +60,7 @@ function Cart(props) {
                                                     <img src={image} className="w-16" />
                                                 </div>
 
-                                             
+
 
                                                 <div className="border-2 border-b-0 py-2 px-4 flex justify-between">
                                                     <span className="self-center font-bold">Price:</span>
@@ -124,6 +135,7 @@ function Cart(props) {
                     </>
                 }
             </div>
+            <Footer />
         </>
     );
 }

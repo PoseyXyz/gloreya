@@ -17,7 +17,7 @@ function App() {
   const { showContactBar, setShowContactBar, showSidebar, setShowSidebar, cart, removeFromCart, total } = useContext(HavenContext)
   return (
     <>
-      {/*100percent sidebar */}
+      {/*contact sidebar */}
       <div className="h-screen bg-gray-600 fixed z-50 right-0 gap-4" style={{ width: showContactBar ? '100%' : '0' }}>
         <div className="bg-white w-full xl:w-2/12 py-4 h-full absolute right-0 flex flex-col gap-8 overflow-hidden">
           <div className="flex flex-col px-4 p-4">
@@ -39,7 +39,7 @@ function App() {
       </div>
 
 
-      {/*25percent sidebar */}
+      {/*cart sidebar */}
       <div className={showSidebar ? 'sideBarOpen' : 'sideBarClosed'}>
         <button className="text-xl p-4 rounded-full border border-red-500 text-red-500 bg-white shadow-2xl text-center self-center mt-4" onClick={() => setShowSidebar(false)}><FaTimesCircle /></button>
         {cart.length === 0
