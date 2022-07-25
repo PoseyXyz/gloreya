@@ -6,7 +6,7 @@ import gallery4 from '../images/gallery4.jpg'
 import gallery5 from '../images/gallery5.jpg'
 import gallery6 from '../images/gallery6.jpg'
 
-function Gallery(props) {
+function Gallery() {
     return (
         <div className="">
             <div className="container flex flex-col gap-12 my-4">
@@ -17,31 +17,31 @@ function Gallery(props) {
                 <div className="flex flex-col gap-4 sm:grid sm:grid-cols-4 sm:gap-4 md:gap-7">
                     <div className="flex items-center">
                     <div>
-                        <img src={gallery1} className="rounded-lg"/>
+                        <img src={gallery1} className="rounded-lg" alt='burger_gallery_img'/>
                     </div>
                     </div>
 
                     <div className="flex flex-col gap-4">
                     <div>
-                        <img src={gallery2} className="rounded-lg"/>
+                        <img src={gallery2} className="rounded-lg" alt='burger_gallery_img'/>
                     </div>
                     <div>
-                        <img src={gallery3} className="rounded-lg"/>
+                        <img src={gallery3} className="rounded-lg" alt='burger_gallery_img'/>
                     </div>
                     </div>
 
                     <div className="flex flex-col gap-4 md:mt-12">
                     <div>
-                        <img src={gallery4} className="rounded-lg"/>
+                        <img src={gallery4} className="rounded-lg" alt='burger_gallery_img'/>
                     </div>
                     <div>
-                        <img src={gallery5} className="rounded-lg"/>
+                        <img src={gallery5} className="rounded-lg" alt='burger_gallery_img'/>
                     </div>
                     </div>
                   
                     <div className="flex md:items-center">
                     <div>
-                        <img src={gallery6} className="rounded-lg"/>
+                        <img src={gallery6} className="rounded-lg" alt='burger_gallery_img'/>
                     </div>
                     </div>
                 </div>

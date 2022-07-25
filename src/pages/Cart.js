@@ -6,13 +6,8 @@ import { HavenContext } from '../Context';
 import { FaCartPlus } from 'react-icons/fa'
 
 function Cart(props) {
-    const { products, addToCart, total, removeFromCart, cart, incrementSingleCartItemCount, decrementSingleCartItemCount, controlQuantity } = useContext(HavenContext)
-    const styles = {
-        border: '1px solid red',
-        margin: '1rem'
-    }
-
-
+    const {total, removeFromCart, cart, incrementSingleCartItemCount, decrementSingleCartItemCount, controlQuantity } = useContext(HavenContext)
+   
     return (
         <>
             <HalfBanner headline="Cart" />

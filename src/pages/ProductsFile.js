@@ -3,27 +3,21 @@ import { FaCartPlus, FaCheck } from 'react-icons/fa';
 import HalfBanner from '../components/HalfBanner';
 import { HavenContext } from '../Context';
 
-function ProductsFile(props) {
-    const { price, values, handleChange, setPrice, minPrice, filterList, activeFilters, onFilterChange, maxPrice, filteredList, filterPriceRange, addToCart, please } = useContext(HavenContext)
-    const styles = {
-        border: '1px solid red',
+function ProductsFile() {
+    const { price, values, handleChange, setPrice, minPrice, filterList, activeFilters, onFilterChange, maxPrice, filteredList, filterPriceRange, addToCart } = useContext(HavenContext)
 
-    }
     useEffect(() => {
         filterPriceRange()
 
     }, [price, values, activeFilters])
 
-    // useEffect(()=>{
 
-    //     handleOrder()
-    // }, [values.sOrder])
 
     const [showPopup, setShowPopup] = useState(false)
 
 
 
-    const timeoutFunction = () => {
+    const triggerProductAddedPopup = () => {
         setShowPopup(true)
 
         setTimeout(() => {
@@ -33,8 +27,6 @@ function ProductsFile(props) {
 
     return (
         <div className="relative">
-
-
 
             {/*dissapearing button */}
             <div className="bg-yellow-500 inline-block px-6 py-3 text-xs font-extrabold fixed z-50 top-16 right-1/30" style={{ 'display': showPopup ? 'inline-block' : 'none' }}><p>PRODUCT HAS BEEN ADDED</p></div>
@@ -55,7 +47,7 @@ function ProductsFile(props) {
                                 <select name="sOrder" className="self-start rounded-2xl border border-gray-300 p-2" value={values.sOrder} onChange={handleChange}>
                                     <option>Sort by</option>
                                     <option value="descending">Sort by price: High to low</option>
-                                    <option value="ascending">Sort by pprice: Low to high</option>
+                                    <option value="ascending">Sort by price: Low to high</option>
                                 </select>
                             </div>
                             {/* <p>{values.sOrder}</p> */}
@@ -72,9 +64,9 @@ function ProductsFile(props) {
                                     <img src={product.image} className="rounded-lg w-screen rounded-b-none product-card" alt="" />
 
                                     <div className="flex flex-col shadow-md rounded-lg border-t-0 rounded-t-none py-3 border-gray-300 px-4">
-                                        <p className="font-bold text-xl text-center">{product.title}</p>
+                                        <h3 className="font-bold text-xl text-center">{product.title}</h3>
                                         <p className="text-center text-lg my-2 text-gray-700 font-semibold">${product.price}</p>
-                                        <button className={product.inCart ? 'productBtn bg-green-500 cursor-default' : 'productBtn bg-brand-red hover:bg-brand-yellow cursor-pointer'} disabled={product.inCart ? true : false} onClick={() => { addToCart(product.id); timeoutFunction() }}><span>{product.inCart ? 'Item in Cart' : 'Add to Cart'}</span> <i>{product.inCart ? <FaCheck /> : <FaCartPlus />}</i></button>
+                                        <button className={product.inCart ? 'productBtn bg-green-500 cursor-default' : 'productBtn bg-brand-red hover:bg-brand-yellow cursor-pointer'} disabled={product.inCart ? true : false} onClick={() => { addToCart(product.id); triggerProductAddedPopup() }}><span>{product.inCart ? 'Item in Cart' : 'Add to Cart'}</span> <i>{product.inCart ? <FaCheck /> : <FaCartPlus />}</i></button>
                                     </div>
                                     {/* <p>{product.type}</p>
                                     <button onClick={() => addToCart(product.id)}>Add to Cart</button> */}

@@ -5,7 +5,7 @@ import { FaPlus } from 'react-icons/fa';
 import blob from '../images/blob.svg'
 import { CgLayoutGridSmall } from 'react-icons/cg'
 import { HavenContext } from '../Context';
-function Banner(props) {
+function Banner() {
     const { setShowContactBar } = useContext(HavenContext)
     return (
         <div className="bg-brand-yellow relative overflow-hidden flex flex-col px-4 sm:px-8 xl:px-0">
@@ -16,7 +16,7 @@ function Banner(props) {
                 <div className='container'>
                     <Navbar />
                 </div>
-                <div className="hidden absolute 3xl:2/12 w-14% right-0 h-10 bg-brand-red rounded-l-3xl p-4 mt-4 ml-10 2xl:flex items-center"><button onClick={() => setShowContactBar(true)}><i className="text-white text-4xl"><CgLayoutGridSmall /></i></button></div>
+                <div className="hidden absolute 3xl:2/12 w-14% right-0 h-10 bg-brand-red rounded-l-3xl p-4 mt-4 ml-10 2xl:flex items-center z-20"><button onClick={() => setShowContactBar(true)}><i className="text-white text-4xl"><CgLayoutGridSmall /></i></button></div>
 
             </div>
             <div className="container flex-1">

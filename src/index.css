@@ -52,7 +52,7 @@ li,
 }
 
 .sideBarOpen {
-  @apply h-screen bg-white fixed z-50 right-0 gap-6 flex flex-col overflow-hidden w-full xl:w-1/4 px-4;
+  @apply h-screen bg-white fixed z-50 right-0 flex flex-col overflow-hidden w-full xl:w-1/4;
 }
 
 .sideBarClosed {

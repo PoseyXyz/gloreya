@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaCartPlus, FaPlusCircle } from 'react-icons/fa';
-import delivery from '../images/products/delivery.svg'
+import delivery_svg from '../images/products/delivery.svg'
 
 function Delivery() {
     return (
@@ -14,14 +14,14 @@ function Delivery() {
                 </div>
 
                 <div className="flex flex-col items-center justify-center gap-4">
-                <img src={delivery}/>
+                    <img src={delivery_svg} alt='delivery_animated_img' />
                 </div>
 
                 <div className="flex flex-col gap-4">
                     <span className="text-brand-red text-lg font-extrabold text-right mini-headline">REWARDS</span>
                     <h3 className="text-black font-black text-2xl md:text-5xl text-right">Earn points every time you order online</h3>
                     <p className="text-gray-500 text-right">With each online order, you get rewarded with loyalty points which can be used to redeem free meals and other prizes from us.</p>
-                    <button className="btn font-bold flex items-center gap-3 self-end"><i><FaPlusCircle/></i> LEARN MORE</button>
+                    <button className="btn font-bold flex items-center gap-3 self-end"><i><FaPlusCircle /></i> LEARN MORE</button>
                 </div>
 
             </div>

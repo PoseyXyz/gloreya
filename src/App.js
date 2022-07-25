@@ -21,7 +21,7 @@ function App() {
       <div className="h-screen bg-gray-600 fixed z-50 right-0 gap-4" style={{ width: showContactBar ? '100%' : '0' }}>
         <div className="bg-white w-full xl:w-2/12 py-4 h-full absolute right-0 flex flex-col gap-8 overflow-hidden">
           <div className="flex flex-col px-4 p-4">
-            <button className="self-end font-light text-2xl text-brand-red" onClick={() => setShowContactBar(false)}><FaTimesCircle/></button>
+            <button className="self-end font-light text-2xl text-brand-red" onClick={() => setShowContactBar(false)}><FaTimesCircle /></button>
           </div>
           <div className="flex flex-col gap-6 md:gap-8 px-6 py-4 md:py-8">
             <img src={ingredients} className="w-5/12 xl:w-full self-center" />
@@ -41,10 +41,20 @@ function App() {
 
       {/*cart sidebar */}
       <div className={showSidebar ? 'sideBarOpen' : 'sideBarClosed'}>
-        <button className="text-xl p-4 rounded-full border border-red-500 text-red-500 bg-white shadow-2xl text-center self-center mt-4" onClick={() => setShowSidebar(false)}><FaTimesCircle /></button>
+        <div className='flex justify-between p-4 items-center bg-cart-btn-purple text-white'>
+          <span className='font-bold text-lg'>Cart <span className='text-gray-300'>({cart.length} items)</span></span>
+          <button className="text-lg p-3 rounded-full border border-red-500 text-red-500 bg-white shadow-2xl text-center self-center" onClick={() => setShowSidebar(false)}><FaTimesCircle /></button>
+        </div>
         {cart.length === 0
           ?
-          <p className="text-light-text">No products in cart</p>
+          <div className='flex-1 flex justify-center items-center'>
+            <div className='flex flex-col gap-4 items-center'>
+              <p className="text-light-text">No products in cart</p>
+              <Link to='/products'>
+                <button onClick={() => setShowSidebar(false)} className="py-4 px-8 text-white bg-cart-btn-purple rounded-md text-sm font-bold hover:bg-gray-200 duration-500 hover:text-black">View Food Items</button>
+              </Link>
+            </div>
+          </div>
           :
           <div className="flex flex-col gap-6 overflow-y-scroll">
             <div className="flex flex-col gap-4">
@@ -69,7 +79,7 @@ function App() {
 
             <div className="flex justify-between gap-4 mb-4">
               <Link className="bg-purple-600 rounded py-3 px-5 w-full font-semibold text-sm text-white text-center" to='/cart'>
-              <button >VIEW CART</button>
+                <button >VIEW CART</button>
               </Link>
               <button className="bg-purple-400 rounded py-3 px-5 w-full font-semibold text-sm text-white">CHECKOUT</button>
             </div>
@@ -79,7 +89,7 @@ function App() {
       </div>
 
       {/* Cart 26 button*/}
-      <button style={{zIndex:45}} className="p-5 bg-cart-btn-purple inline-block rounded-sm mt-4 shadow-md fixed box-border bottom-4 right-12/100" onClick={() => setShowSidebar(!showSidebar)}><i className="text-white"><FaCartPlus /></i><span className="text-white absolute font-barlow -top-3 -right-2 bg-brand-red px-2 py-0.5 font-thin text-sm rounded-full">{cart.length}</span></button>
+      <button style={{ zIndex: 45 }} className="p-5 bg-cart-btn-purple inline-block rounded-sm mt-4 shadow-md fixed box-border bottom-4 right-12/100" onClick={() => setShowSidebar(!showSidebar)}><i className="text-white"><FaCartPlus /></i><span className="text-white absolute font-barlow -top-3 -right-2 bg-brand-red px-2 py-0.5 font-thin text-sm rounded-full">{cart.length}</span></button>
 
       <Switch>
         <Route exact path="/" component={Home} />

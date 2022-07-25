@@ -1,11 +1,10 @@
-import React, { useEffect, useLayoutEffect, useState } from 'react'
-import useForm from './components/useForm'
+import React, { useEffect, useState } from 'react'
+import useForm from './hooks/useForm'
 import { restaurantProducts } from './data'
 
 const HavenContext = React.createContext()
 
 const HavenProvider = ({ children }) => {
-    const [text] = useState('Hello from the home page of Haven CONTEXT')
     const [products, setProducts] = useState([])
 
     const [filteredList, setFilteredList] = useState([])
@@ -23,7 +22,7 @@ const HavenProvider = ({ children }) => {
     const [showSidebar, setShowSidebar] = useState(false)
     const [miniNavbarOpen, setMiniNavbarOpen] = useState(false)
 
-    const [filterList, setFilterList] = useState([
+    const [filterList] = useState([
         {
             id:1,
             name:'Burgers',
@@ -118,12 +117,12 @@ const HavenProvider = ({ children }) => {
     //     handleOrder()
     // }, [values.sOrder])
 
-    const handleOrder=(arrayToFilter)=>{
+    const handleSort=(arrayToSort)=>{
         if (values.sOrder==="ascending"){
-            let sortedList = arrayToFilter.sort((a, b)=>(b['price'] < a['price']) ? 1 : -1)
+            let sortedList = arrayToSort.sort((a, b)=>(b['price'] < a['price']) ? 1 : -1)
             setFilteredList(sortedList)
         }else if (values.sOrder === 'descending'){
-            let sortedList = arrayToFilter.sort((a, b)=>(a['price'] < b['price']) ? 1 : -1)
+            let sortedList = arrayToSort.sort((a, b)=>(a['price'] < b['price']) ? 1 : -1)
             setFilteredList(sortedList)
         }
     }
@@ -155,14 +154,6 @@ const HavenProvider = ({ children }) => {
     filterByCheckboxes(tempProducts)     
    }
 
-   const please =()=>{
-    // let tempProducts = [...filteredList]
-    // let search = values.searchString.trim().toLowerCase()
-    // if(search.length>0){
-    //     tempProducts = tempProducts.filter(products=>products.title.toLowerCase().match(search))
-    //     setFilteredList(tempProducts)
-    // }
-}
 
 
 
@@ -253,24 +244,18 @@ const HavenProvider = ({ children }) => {
     }
 
 
-    const clearCart = () => {
-        setCart([])
-    }
-
-
 
     return (
         <HavenContext.Provider value={{
-            text,
             products,
             cart,
             total,
 
             price, maxPrice, minPrice, setPrice, filteredList, filterPriceRange,
 
-            values, handleChange, handleOrder,
+            values, handleChange, handleSort,
 
-            filterList, activeFilters, onFilterChange, please, controlQuantity,
+            filterList, activeFilters, onFilterChange, controlQuantity,
 
             showContactBar, setShowContactBar, showSidebar, setShowSidebar, miniNavbarOpen, setMiniNavbarOpen,
 

@@ -14,7 +14,7 @@ function Testimonial(props) {
                 </div>
                 <div className="flex flex-col gap-6 lg:flex-row">
                     <div>
-                       <img src={reviewImg1} className="w-screen"/> 
+                       <img src={reviewImg1} className="w-screen" alt="Customer"/> 
                     </div>
                     <div className="mt-4 flex flex-col gap-4 px-4">
                         <i className="text-6xl text-gray-200"><FaQuoteLeft/></i>

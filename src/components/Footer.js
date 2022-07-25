@@ -1,12 +1,12 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import logo from '../images/logo.png'
-function Footer(props) {
+function Footer() {
     return (
         <div className="bg-footer-black py-12 px-4">
             <div className="container flex flex-col gap-8">
                 <div className="flex justify-center">
-                    <img src={logo}/>
+                    <img src={logo} alt="gloreya_logo" />
                 </div>
                 <div className="flex flex-col md:flex-row gap-4 justify-around text-footer-text">
                     <div className="text-center">
@@ -38,17 +38,17 @@ function Footer(props) {
                             <p className="text-sm">Contact</p>
                         </div>
                         <p className="self-center md:self-start text-sm">
-                    Copyright © 2021 Haven.All Right Reserved
-                    </p>
+                            Copyright © 2021 Gloreya.All Right Reserved
+                        </p>
 
                     </div>
                     <div className="flex mt-4 md:mt-0 self-center md:self-end">
-                            <i className="bg-blue-700 social-icon"><FaFacebook/></i>
-                            <i className="bg-blue-500 social-icon"><FaTwitter/></i>
-                            <i className="bg-pink-700 social-icon"><FaInstagram/></i>
-                            <i className="bg-red-600 social-icon"><FaYoutube/></i>
-                        </div>
-                   
+                        <i className="bg-blue-700 social-icon"><FaFacebook /></i>
+                        <i className="bg-blue-500 social-icon"><FaTwitter /></i>
+                        <i className="bg-pink-700 social-icon"><FaInstagram /></i>
+                        <i className="bg-red-600 social-icon"><FaYoutube /></i>
+                    </div>
+
 
                 </div>
             </div>
