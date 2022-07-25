@@ -17,8 +17,8 @@ function Footer() {
                     </div>
                     <div className="text-center">
                         <h3 className="text-white text-xl mb-3 font-bold">Book a table</h3>
-                        <p>Dogfood och Sliders foodtruck.</p>
-                        <p>Under Om oss kan ni läsa</p>
+                        <p>Table services provided</p>
+                        <p>Place a call with the number below</p>
                         <h3>(850) 435-4155</h3>
                     </div>
                     <div className="text-center">
