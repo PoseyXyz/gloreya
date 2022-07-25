@@ -4,6 +4,9 @@ module.exports = {
   theme: {
     extend: {
       transform:['group-hover'],
+      screens:{
+        '3xl':'1600px'
+      },
       colors:{
         "brand-yellow":"#FBBE36",
         "brand-red":"#E7272D",
@@ -25,7 +28,8 @@ module.exports = {
         '180':'45rem',
         '128':'32rem',
         '106':'27rem',
-        '80':'20rem'
+        '80':'20rem',
+        '14%':'14%'
       },
       fontSize:{
         '2xs':'.5rem',
@@ -36,7 +40,6 @@ module.exports = {
       center:true,
       padding:'1rem',
       screens:{
-        lg:"1124px",
         xl:"1124px",
         "2xl":"1124px"
       }

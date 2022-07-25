@@ -5,7 +5,7 @@ import PepsiImg from '../images/pepsi.png'
 function Welcome(props) {
     return (
     
-            <div className="container">
+            <div className="container bg-red-500">
             <div className="flex flex-1 flex-col gap-3 md:gap-6 md:grid md:grid-cols-2 items-center my-8 xl:my-16 p-6">
                 <div className="flex flex-col gap-1 py-2">
                     <p className="text-brand-red text-lg font-extrabold mini-headline">WELCOME</p>

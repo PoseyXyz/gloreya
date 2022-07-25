@@ -41,7 +41,7 @@ function Navbar(props) {
                         </div>
 
                     </nav>
-                    <div className="hidden w-5/12 h-10 bg-brand-red rounded-l-3xl p-4 mt-4 ml-10 lg:flex items-center"><button onClick={() => setShowContactBar(true)}><i className="text-white text-4xl"><CgLayoutGridSmall /></i></button></div>
+                    {/* <div className="hidden w-3/4 h-10 bg-brand-red rounded-l-3xl p-4 mt-4 ml-10 lg:flex items-center"><button onClick={() => setShowContactBar(true)}><i className="text-white text-4xl"><CgLayoutGridSmall /></i></button></div> */}
                 </header>
             </section>
             <div className={miniNavbarOpen?'miniNavbarOpen':'miniNavbarClosed'}>
