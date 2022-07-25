@@ -4,21 +4,22 @@ import { Link } from 'react-router-dom';
 import { HavenContext } from '../Context';
 import Logo from '../images/logo.png'
 import { GiHamburgerMenu } from 'react-icons/gi'
+import { useLocation } from 'react-router-dom';
 
 function Navbar() {
     const { cart, miniNavbarOpen, setMiniNavbarOpen } = useContext(HavenContext)
+    const location = useLocation()
     return (
         <div className="relative">
-
             <section className="flex justify-end">
                 <header className="flex items-center relative z-40 w-full">
                     <nav className="flex w-full justify-between pb-8 pt-12 items-center">
                         <ul className="hidden md:flex space-x-8 text-sm">
-                            <Link to='/' style={{ color: '#E7272D' }} className="nav-li">HOME</Link>
-                            <Link to='/menu' className="nav-li">MENU</Link>
-                            <Link to='/cart' className="nav-li">CART</Link>
+                            <Link to='/' className={`${location.pathname==='/' ? 'active':''} nav-li`}>HOME</Link>
+                            <Link to='/menu' className={`${location.pathname==='/menu' ? 'active':''} nav-li`}>MENU</Link>
+                            <Link to='/cart' className={`${location.pathname==='/cart' ? 'active':''} nav-li`}>CART</Link>
                             {/* <li className="nav-li">SHOP</li> */}
-                            <Link to='/contact' className="nav-li">CONTACT</Link>
+                            <Link to='/contact' className={`${location.pathname==='/contact' ? 'active':''} nav-li`}>CONTACT</Link>
                             <Link to='/products' className="nav-li hidden">ONLINE ORDER</Link>
 
                         </ul>

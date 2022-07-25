@@ -40,7 +40,7 @@ li,
 }
 
 .nav-li {
-  @apply text-white cursor-pointer hover:text-brand-red;
+  @apply text-white cursor-pointer hover:text-brand-red duration-500;
 }
 
 .btn {
@@ -65,4 +65,7 @@ li,
 
 .social-icon {
   @apply rounded-full mx-1 p-3 text-white;
+}
+.active{
+  color: #E7272D !important;
 }
