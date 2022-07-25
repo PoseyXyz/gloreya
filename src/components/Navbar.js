@@ -1,12 +1,12 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { FaCartPlus, FaBars } from 'react-icons/fa'
-import { CgLayoutGridSmall } from 'react-icons/cg'
 import { Link } from 'react-router-dom';
 import { HavenContext } from '../Context';
 import Logo from '../images/logo.png'
+import {GiHamburgerMenu, GiCancel} from 'react-icons/gi'
 
-function Navbar(props) {
-    const { cart, setShowContactBar, miniNavbarOpen, setMiniNavbarOpen } = useContext(HavenContext)
+function Navbar() {
+    const { cart, miniNavbarOpen, setMiniNavbarOpen } = useContext(HavenContext)
     return (
         <div className="relative">
 
@@ -22,11 +22,11 @@ function Navbar(props) {
                             <Link to='/products' className="nav-li hidden">ONLINE ORDER</Link>
 
                         </ul>
-                        <button className="md:hidden" onClick={()=>setMiniNavbarOpen(!miniNavbarOpen)}>
-                            <i className="text-white text-xl"><FaBars /></i>
+                        <button className="md:hidden bg-brand-red p-3 rounded-lg" onClick={()=>setMiniNavbarOpen(!miniNavbarOpen)}>
+                     <i className="text-white text-xl"><GiHamburgerMenu /></i>
                         </button>
                         <div>
-                            <img src={Logo} className="w-20 h-24"/>
+                            <img src={Logo} className="w-20 h-24" alt='gloreya_logo'/>
 
                         </div>
                         <div className="flex items-center space-x-10">
@@ -44,7 +44,7 @@ function Navbar(props) {
                     {/* <div className="hidden w-3/4 h-10 bg-brand-red rounded-l-3xl p-4 mt-4 ml-10 lg:flex items-center"><button onClick={() => setShowContactBar(true)}><i className="text-white text-4xl"><CgLayoutGridSmall /></i></button></div> */}
                 </header>
             </section>
-            <div className={miniNavbarOpen?'miniNavbarOpen':'miniNavbarClosed'}>
+            <div className={`${miniNavbarOpen?'h-auto p-4 w-full':'h-0 w-0'} duration-300 overflow-hidden z-50 absolute md:hidden flex flex-col gap-8 font-bold bg-black`}>
                 <Link to='/' style={{ color: '#E7272D' }} className="nav-li">HOME</Link>
                 <Link to='/menu' className="nav-li">MENU</Link>
                 <Link className="nav-li">SHOP</Link>

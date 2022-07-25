@@ -22,13 +22,6 @@
   @apply h-screen bg-white fixed z-50 right-0 gap-6 flex flex-col overflow-hidden w-0
 }
 
-.miniNavbarOpen{
-  @apply bg-black z-50 absolute flex flex-col gap-8 font-bold text-sm p-4 w-full
-}
-
-.miniNavbarClosed{
-  @apply bg-black z-50 relative flex-col gap-8 font-bold text-sm p-4 hidden
-}
 
 body {
   margin: 0;

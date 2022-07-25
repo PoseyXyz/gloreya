@@ -1,30 +1,32 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Navbar from './Navbar';
 import bannerImg from '../images/burger1.png'
 import { FaPlus } from 'react-icons/fa';
 import blob from '../images/blob.svg'
 import { CgLayoutGridSmall } from 'react-icons/cg'
+import { HavenContext } from '../Context';
 function Banner(props) {
+    const { setShowContactBar } = useContext(HavenContext)
     return (
         <div className="bg-brand-yellow relative overflow-hidden flex flex-col px-4 sm:px-8 xl:px-0">
             {/* <div className="xl:w-1/6 2xl:w-1/4 w-0 bg-red-600">
                
             </div> */}
-            <div className='flex overflow-visible items-center container gap-4 z-50'>
-                            <div className='container'>
-                            <Navbar />
-                            </div>
-                            <div className="hidden absolute 3xl:2/12 w-14% right-0 h-10 bg-brand-red rounded-l-3xl p-4 mt-4 ml-10 2xl:flex items-center"><button ><i className="text-white text-4xl"><CgLayoutGridSmall /></i></button></div>
+            <div className='flex overflow-visible items-center container gap-4'>
+                <div className='container'>
+                    <Navbar />
+                </div>
+                <div className="hidden absolute 3xl:2/12 w-14% right-0 h-10 bg-brand-red rounded-l-3xl p-4 mt-4 ml-10 2xl:flex items-center"><button onClick={() => setShowContactBar(true)}><i className="text-white text-4xl"><CgLayoutGridSmall /></i></button></div>
 
             </div>
             <div className="container flex-1">
-                
+
                 <div className="sm:pt-12 flex justify-end">
 
                     <div className="z-30 relative h-full w-screen flex flex-col">
 
 
-                        <div className="relative grid grid-cols-2 w-full gap-0 items-center">
+                        <div className="relative grid grid-cols-2 w-full gap-4 items-center">
                             <div className="flex flex-1 justify-center flex-col w-2/4 gap-2">
                                 <div style={{ color: '#EB452F' }} className="flex gap-4 items-center">
                                     <p className="text-sm font-bold sm:font-extrabold sm:text-xl md:text-2xl">NEW IN MENU</p>
@@ -48,8 +50,8 @@ function Banner(props) {
                                 </div>
                             </div>
                             <div className="relative flex">
-                                <img className="absolute z-10 w-10/12" src={blob} />
-                                <img className="relative z-20" src={bannerImg} alt="" />
+                                <img className="absolute z-10 w-10/12" alt='banner_blob' src={blob} />
+                                <img className="relative z-20" alt="burger_image" src={bannerImg} />
                             </div>
 
 

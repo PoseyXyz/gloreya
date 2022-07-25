@@ -17,10 +17,12 @@ module.exports = {
         "footer-black":"#1B1B1B",
         "news-card-gray":"#f9f9f9",
         "footer-text":"#aaa",
-        "light-text":"#7a7a7a"
+        "light-text":"#7a7a7a",
+        "cart-btn-purple":"#8d29ff"
+        
       },
       inset:{
-        '1/30':'3.333333%'
+        '12/100':'12%'
       },
       width:{
         '216':"53.5rem",
@@ -38,7 +40,7 @@ module.exports = {
     },
     container:{
       center:true,
-      padding:'1rem',
+      padding:'.2rem',
       screens:{
         xl:"1124px",
         "2xl":"1124px"
